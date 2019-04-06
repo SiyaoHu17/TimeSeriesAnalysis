@@ -1,31 +1,85 @@
 DSO 522: Applied Time Series Analysis for Forecasting
-FINAL GROUP PROJECT REPORT
+
+Shanghai License Plate Auction Price Prediction
+
 Group Members: 
 Cao, Xinyue 
 Fu, Yu
 Hu, Siyao 
 Jiang, Shanjiao 
 
+Objective:
+facilitate license plate bidding to win bidding with low cost, increase the
+facilitate government to control
+use time series analysis to forcast future average bidding price
 
+Motivation:
+5% success rate
 
-
+Data source:
+Kaggle.com, statistics from web pages
+Technique:
+Time series analysis for forecasting (Seasonal ARIMA, TBATS, and STLM) 
+Tools: 
+R(package “forecast”), MS Excel
 
 
 Data preparation:
-Get data, Add data, deal with deficit, assumptions
-
-Choose metirc:
-Investigate, include policy impact, other variables and time series
-
-Modeling:
-Train model: Naïve, Regression, multiple regression, sommthing, arima (forecast package)
-(RMESE, MAPE) (trend, seasonality, policy) provide range
-Cauious and future step
-
+Get data through reseach (monthly successful average bidding price from January 2002 to July 2018) 
+Add new data points (added the additional price data from August 2018 to November 2018 based on the researches)
+deal with deficit through assumptions (combined amount due to the Chinese New Year)
 
 Industry research, policy research
 
+Define metirc:
+based on researches and objective(closer to average will win)
+average price of license plate
+Investigate, include policy impact, other variables and time series
+
+Data exploration:
+find out trend, seasonality
+special pattern breaks (ad-hoc analysis)(government issued policy->price decrease)
+
+Feature engineering:
+trend, seasonality(11 dummies), policy(restart from 1), cyclicity
+number of available plates, lowest successful bidding price, monthly total number of applicants
+average bidding prices 
+
+Modeling:
+predict future prices
+191 month traning set, 12 month mesting set, RMSE(unit $matters>MAPE)
+five time series models: Naïve, linear regression, multiple regression, sommthing, arima (forecast package)
+adjust model based on PACF to include lag
+best model: linear regression (2727.74 RSME on the testing set)
+
+
+Forecast:
+retrain the model using all data
+forecast one year of average pricing + 95% intervals
+
+Outcome:
+97.21% accuracy, 20+ times 
+bidders: forecast as reference for bidders: pricing and range, bidding strategy: when to bid within one year
+government: evaluate whether biddings are reasonable, regulate price and forecast future policy performance
+
+Value:
 Help register get plate, facilitate bidders offer reasonable price and win the bid
 Save money, Find best time to buy over the year
-
 Help Shanghai Government regulate and forecast policy performance, Detected price abnormality
+
+
+
+Limitations:
+trend is different in recent five years
+brand new policy
+
+Learnt:
+simple model perform the best
+
+
+
+
+
+
+
+
