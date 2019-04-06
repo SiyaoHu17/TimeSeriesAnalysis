@@ -1,0 +1,31 @@
+DSO 522: Applied Time Series Analysis for Forecasting
+FINAL GROUP PROJECT REPORT
+Group Members: 
+Cao, Xinyue 
+Fu, Yu
+Hu, Siyao 
+Jiang, Shanjiao 
+
+
+
+
+
+
+Data preparation:
+Get data, Add data, deal with deficit, assumptions
+
+Choose metirc:
+Investigate, include policy impact, other variables and time series
+
+Modeling:
+Train model: Naïve, Regression, multiple regression, sommthing, arima (forecast package)
+(RMESE, MAPE) (trend, seasonality, policy) provide range
+Cauious and future step
+
+
+Industry research, policy research
+
+Help register get plate, facilitate bidders offer reasonable price and win the bid
+Save money, Find best time to buy over the year
+
+Help Shanghai Government regulate and forecast policy performance, Detected price abnormality
